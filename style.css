@@ -1,0 +1,99 @@
+/* Life OS の公開ページ 共通スタイル（OMIT. の法務ページと同じ骨組み）。
+   明るい灰の地に、装飾はしない。 */
+
+:root {
+  --bg: #f4f4f2;
+  --ink: #2b2a28;
+  --dim: #6b6862;
+  --line: #e2ded5;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 48px 20px 96px;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  line-height: 1.9;
+  -webkit-text-size-adjust: 100%;
+}
+
+main { max-width: 680px; margin: 0 auto; }
+
+.brand {
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  color: var(--dim);
+  margin-bottom: 32px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0 0 8px;
+}
+
+.meta {
+  font-size: 13px;
+  color: var(--dim);
+  margin: 0 0 40px;
+}
+
+h2 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 40px 0 12px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+h2:first-of-type { border-top: none; padding-top: 0; }
+
+p, li { margin: 0 0 12px; }
+ul, ol { padding-left: 1.4em; margin: 0 0 16px; }
+
+dl { margin: 0 0 16px; }
+dt { font-weight: 600; margin-top: 16px; }
+dd { margin: 0 0 4px; padding-left: 0; color: var(--ink); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 20px;
+  font-size: 15px;
+}
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--line);
+}
+th { width: 34%; font-weight: 600; color: var(--dim); }
+
+a { color: var(--ink); }
+
+.pending {
+  background: #fff3c4;
+  padding: 0 4px;
+  font-weight: 600;
+}
+
+footer {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--dim);
+}
+footer a { margin-right: 16px; }
+
+@media (max-width: 480px) {
+  body { padding: 32px 18px 72px; font-size: 15px; }
+  th, td { display: block; width: 100%; padding: 4px 0; border: none; }
+  th { padding-top: 14px; }
+  td { border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+}
